@@ -20,7 +20,7 @@ object QuickStart01 {
   def main(args: Array[String]): Unit = {
     //0.建立SparkConf对象,设置主机名称和setAppName，并建立程序入口点StreamingContext
     val conf = new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount")
-    val ssc = new StreamingContext(conf, Seconds(1))
+    val ssc = new StreamingContext(conf, Seconds(5))
 
     //1.Define the input sources by creating input DStreams.
     //确定数据的输入源

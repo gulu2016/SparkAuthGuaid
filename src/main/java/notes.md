@@ -26,11 +26,9 @@
     3.当运行SparkStreaming 程序的时候，不要使用“local” or “local[1]”，因为至少有一个线程运行
       Receiver
       
+该看：http://spark.apache.org/docs/latest/streaming-programming-guide.html#window-operations
       
-应该看：http://spark.apache.org/docs/latest/streaming-programming-guide.html#using-object-stores-as-a-source-of-data
-      
-
-          
-    
-    
+收藏博客
+1.设置日志打印级别的博客：https://blog.csdn.net/a123demi/article/details/72821488
+2.设置语言级别的帖子：https://blog.csdn.net/amoscn/article/details/79718400    
     
