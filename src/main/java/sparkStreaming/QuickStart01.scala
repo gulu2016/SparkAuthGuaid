@@ -1,3 +1,5 @@
+package sparkStreaming
+
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
@@ -5,26 +7,25 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
   *
   * @ProjectName: SparkAuthGuaid
   * @Package:
-  * @ClassName: ReadFromFile02
-  * @Description: java类作用描述 
+  * @ClassName: QuickStart
+  * @Description: java类作用描述
   * @Author: gulu
-  * @CreateDate: 19-3-21 下午4:10
+  * @CreateDate: 19-3-21 下午1:40
   * @UpdateUser: 更新者
-  * @UpdateDate: 19-3-21 下午4:10
+  * @UpdateDate: 19-3-21 下午1:40
   * @UpdateRemark: 更新说明
   * @Version: 1.0
-  * 参考博客https://blog.csdn.net/u010886217/article/details/82988562
-  * 实现从文件流中实时统计数据，实现文件中字符的wordcount
+  * 看注释，已经标注出大体流程
   */
-object ReadFromFile02 {
+object QuickStart01 {
   def main(args: Array[String]): Unit = {
     //0.建立SparkConf对象,设置主机名称和setAppName，并建立程序入口点StreamingContext
     val conf = new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount")
-    val ssc = new StreamingContext(conf, Seconds(10))
+    val ssc = new StreamingContext(conf, Seconds(5))
 
     //1.Define the input sources by creating input DStreams.
     //确定数据的输入源
-    val lines = ssc.textFileStream("file:///home/zhangjiaqian/hive/testReadFile/")
+    val lines = ssc.socketTextStream("localhost", 9999)
 
     //2.Define the streaming computations
     // by applying transformation and output operations to DStreams.
@@ -45,4 +46,5 @@ object ReadFromFile02 {
     //等待数据处理结束
     ssc.awaitTermination()  // Wait for the computation to terminate
   }
+
 }

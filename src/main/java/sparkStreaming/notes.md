@@ -31,4 +31,8 @@
 收藏博客
 1.设置日志打印级别的博客：https://blog.csdn.net/a123demi/article/details/72821488
 2.设置语言级别的帖子：https://blog.csdn.net/amoscn/article/details/79718400    
-    
+
+
+问题：
+1.使用java的话，匿名内部类要会写，lambda表达式要会写
+2.要熟悉scala语法
