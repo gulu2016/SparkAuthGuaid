@@ -27,7 +27,7 @@ public class JObjectSerial implements Serializable {
 
     public static void main(String[] args){
         try {
-            FileOutputStream fos = new FileOutputStream("/home/zhangjiaqian/temp.out");
+            FileOutputStream fos = new FileOutputStream("/home/zhangjiaqian/salary.out");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             JObjectSerial jos = new JObjectSerial();
             oos.writeObject(jos);
